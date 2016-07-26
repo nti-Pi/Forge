@@ -1,6 +1,11 @@
 # Forge #
 _A *simple* library for memory allocation, logging, and memory-efficient data-structures._
 
+## Purpose: ##
+If you're a lazy person, then Forge is for you.  
+Forge is a collection of simple, common tools that can be used as a starting point for C++ projects on targets where memory is a more precious resource than processor cycles.  
+Forge was originally designed to facilitate NLP work in C++ on a budget-laptop.
+
 ## Usage: ##
 Forge is a header-only library.
 Therefore, to use Forge, simply add "Forge/src" as an include-path when compiling.
