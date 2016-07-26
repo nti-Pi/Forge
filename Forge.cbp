@@ -16,7 +16,7 @@
 				<Compiler>
 					<Add option="-Wall" />
 					<Add option="-g" />
-					<Add option="-D__DBG__FORGE__" />
+					<Add option="-D__FORGE__DBG__ (1)" />
 				</Compiler>
 			</Target>
 			<Target title="release">
@@ -27,8 +27,9 @@
 				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Compiler>
-					<Add option="-Wall" />
 					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-D__FORGE__DBG__ (0)" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,6 +39,7 @@
 		<Compiler>
 			<Add directory="deps/include" />
 		</Compiler>
+		<Unit filename="src/forge/exceptions/BaseException.hpp" />
 		<Unit filename="src/forge/logging/Log.hpp" />
 		<Unit filename="src/forge/memory/Allocator.hpp" />
 		<Extensions>

@@ -29,47 +29,48 @@ namespace logging {
     FILE *_ErrStream = nullptr;
 
 
-    static
-    void printTimeStamp(FILE *stream) {
-        time_t timeNow;
-        time(&timeNow);
+    #ifdef __FORGE__DBG__
+        static
+        void printTimeStamp(FILE *stream) {
+            time_t timeNow;
+            time(&timeNow);
 
-        tm *timeInfo = localtime(&timeNow);
+            tm *timeInfo = localtime(&timeNow);
 
-        char str_months[12][4] = {
-            "Jan",
-            "Feb",
-            "Mar",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
-        };
+            char str_months[12][4] = {
+                "Jan",
+                "Feb",
+                "Mar",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            };
 
-        char str_days[7][4] = {
-            "Sun",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thu",
-            "Fri",
-            "Sat"
-        };
+            char str_days[7][4] = {
+                "Sun",
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat"
+            };
 
-        fprintf(stream,
-                "[%s|%d %s %d][%d:%d:%d]| ",
-                str_days[timeInfo->tm_wday],
-                timeInfo->tm_mday,
-                str_months[timeInfo->tm_mon],
-                timeInfo->tm_year + 1900,
-                timeInfo->tm_hour,
-                timeInfo->tm_min,
-                timeInfo->tm_sec);
-    }
-
+            fprintf(stream,
+                    "[%s|%d %s %d][%d:%d:%d]| ",
+                    str_days[timeInfo->tm_wday],
+                    timeInfo->tm_mday,
+                    str_months[timeInfo->tm_mon],
+                    timeInfo->tm_year + 1900,
+                    timeInfo->tm_hour,
+                    timeInfo->tm_min,
+                    timeInfo->tm_sec);
+        }
+    #endif // __FORGE__DBG__
 
     void init(FILE *outStream, FILE *errStream) {
         _OutStream = outStream;
@@ -87,7 +88,10 @@ namespace logging {
         va_list args;
         va_start(args, format);
 
-        printTimeStamp(_OutStream);
+        #ifdef __FORGE__DBG__
+            printTimeStamp(_OutStream);
+        #endif // __FORGE__DBG__
+
         vfprintf(_OutStream, format, args);
         fprintf(_OutStream, "\n");
 
@@ -99,7 +103,10 @@ namespace logging {
         va_list args;
         va_start(args, format);
 
-        printTimeStamp(_ErrStream);
+        #ifdef __FORGE__DBG__
+            printTimeStamp(_ErrStream);
+        #endif // __FORGE__DBG__
+
         vfprintf(_ErrStream, format, args);
         fprintf(_OutStream, "\n");
 
