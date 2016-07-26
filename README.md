@@ -14,7 +14,7 @@ Forge supports two build targets:
     *   The memory module can cap the total amount of heap-memory allocated.
     *   The logging module prepends each message with a (date/time)-stamp
 
-    *To build in debug mode, define "__FORGE__DBG__"*
+    To build in debug mode, define *\__FORGE__DBG\__*
 *   release
     In the release build, the Forge library is optimized for performance, and disables multiple introspection-features and checks.
 
