@@ -1,4 +1,4 @@
-#include "DynamicString.hpp"
+#include "DString.hpp"
 
 #include <cstdio>
 #include <cstring>
@@ -8,11 +8,11 @@
 namespace forge {
 namespace structures {
 
-    DynamicString::DynamicString()
+    DString::DString()
         : _Buffer(nullptr) { }
 
 
-    DynamicString::DynamicString(const char *buffer) {
+    DString::DString(const char *buffer) {
         size_t len = strlen(buffer);
         _Buffer = forge_new char[len + 1];
 
@@ -22,17 +22,17 @@ namespace structures {
     }
 
 
-    DynamicString::~DynamicString() {
+    DString::~DString() {
         forge_del _Buffer;
     }
 
 
-    void DynamicString::resizeBuffer(TStringLen newLen) {
+    void DString::resizeBuffer(TStringLen newLen) {
         _Buffer = (char *)forge_cmem_realloc(_Buffer, sizeof(char) * newLen);
     }
 
 
-    void DynamicString::writef(const char *format, ...) {
+    void DString::writef(const char *format, ...) {
         va_list args;
         va_start(args, format);
 

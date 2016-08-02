@@ -4,7 +4,7 @@
 #include "logging/LogContext.hpp"
 #include "structures/io/OutStream.hpp"
 
-#include "structures/DynamicString.hpp"
+#include "structures/DString.hpp"
 
 
 namespace forge {
@@ -21,7 +21,7 @@ namespace logging {
 
     bool isInitialized();
 
-    LogContext createLogContext(DynamicString userName,
+    LogContext createLogContext(DString userName,
                                 OutStream stream,
                                 bool mentionUser = false);
 

@@ -6,16 +6,17 @@
 namespace forge {
 namespace logging {
 
+    using namespace structures;
     using namespace structures::io;
 
 
-    LogContext::LogContext(structures::DynamicString userName,
+    LogContext::LogContext(DString userName,
                            OutStream outputStream,
                            bool mentionUser)
         : _PassThroughStream(outputStream) {
         if (mentionUser) {
             // We must construct a prefix!
-            _PrintPrefix = forge_new structures::DynamicString();
+            _PrintPrefix = forge_new DString();
             _PrintPrefix->writef("[%s]: ", userName.buffer());
         }
         else {
@@ -29,11 +30,11 @@ namespace logging {
     }
 
     // Operators:
-    OutStream &LogContext::operator <<(String *str) {
+    OutStream &LogContext::operator <<(BaseString *str) {
         return (prefix() == nullptr ? (_PassThroughStream << str) : (_PassThroughStream << prefix() << str));
     }
 
-    OutStream &LogContext::operator <<(structures::DynamicString &str) {
+    OutStream &LogContext::operator <<(DString &str) {
         return (prefix() == nullptr ? (_PassThroughStream << str) : (_PassThroughStream << prefix() << str));
     }
 
@@ -65,7 +66,7 @@ namespace logging {
         return (prefix() == nullptr ? (_PassThroughStream << data) : (_PassThroughStream << prefix() << data));
     }
 
-    DynamicString *LogContext::prefix() { return _PrintPrefix; }
+    DString *LogContext::prefix() { return _PrintPrefix; }
 
 
 }   // namespace logging

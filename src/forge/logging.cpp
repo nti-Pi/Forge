@@ -42,7 +42,7 @@ namespace logging {
     bool isInitialized() { return _GlobalStdOutContext != nullptr && _GlobalErrOutContext != nullptr; }
 
 
-    LogContext createLogContext(DynamicString userName,
+    LogContext createLogContext(DString userName,
                                 OutStream stream,
                                 bool mentionUser) {
         return LogContext(userName, stream, mentionUser);

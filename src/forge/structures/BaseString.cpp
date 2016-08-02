@@ -1,4 +1,4 @@
-#include "String.hpp"
+#include "BaseString.hpp"
 
 #include <cstdio>
 
@@ -6,7 +6,7 @@
 namespace forge {
 namespace structures {
 
-    void String::writef(const char *format, ...) {
+    void BaseString::writef(const char *format, ...) {
         va_list args_list;
         va_start(args_list, format);
 

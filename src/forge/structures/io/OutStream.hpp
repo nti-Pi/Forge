@@ -3,9 +3,9 @@
 
 #include <ostream>
 
-#include "../String.hpp"
-#include "../StaticString.hpp"
-#include "../DynamicString.hpp"
+#include "../BaseString.hpp"
+#include "../SString.hpp"
+#include "../DString.hpp"
 
 
 namespace forge {
@@ -22,10 +22,10 @@ namespace io {
 
       public:
 
-        OutStream &operator <<(String *str);
+        OutStream &operator <<(BaseString *str);
         template <unsigned int length>
-        OutStream &operator <<(StaticString<length> str) { return (*this) << &str; }
-        OutStream &operator <<(DynamicString &str) { return (*this) << &str; }
+        OutStream &operator <<(SString<length> str) { return (*this) << &str; }
+        OutStream &operator <<(DString &str) { return (*this) << &str; }
         OutStream &operator <<(int integer);
         OutStream &operator <<(unsigned int unsignedInteger);
         OutStream &operator <<(long int longInteger);

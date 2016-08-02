@@ -1,8 +1,8 @@
 #ifndef __HG__FORGE__LOGGING__LOGMANAGER_HPP__
 #define __HG__FORGE__LOGGING__LOGMANAGER_HPP__
 
-#include "../structures/String.hpp"
-#include "../structures/DynamicString.hpp"
+#include "../structures/BaseString.hpp"
+#include "../structures/DString.hpp"
 #include "../structures/io/OutStream.hpp"
 
 
@@ -14,23 +14,23 @@ namespace logging {
 
 
     struct LogContext {
-        LogContext(structures::DynamicString name,
+        LogContext(DString name,
                    OutStream outputStream,
                    bool mentionUser = false);
         ~LogContext();
 
       protected:
-        OutStream                   _PassThroughStream;
-        structures::DynamicString  *_PrintPrefix;
+        OutStream    _PassThroughStream;
+        DString     *_PrintPrefix;
 
-        DynamicString *prefix();
+        DString     *prefix();
 
       public:
         inline OutStream &get_PassThroughStream() { return _PassThroughStream; }
 
       public:
         // Operators:
-        OutStream &operator <<(String *str);
+        OutStream &operator <<(BaseString *str);
         OutStream &operator <<(int integer);
         OutStream &operator <<(unsigned int unsignedInteger);
         OutStream &operator <<(long int longInteger);
@@ -40,8 +40,8 @@ namespace logging {
         OutStream &operator <<(char character);
 
         template <unsigned int length>
-        OutStream &operator <<(structures::StaticString<length> str) { return (*this) << &str; }
-        OutStream &operator <<(structures::DynamicString &str);
+        OutStream &operator <<(SString<length> str) { return (*this) << &str; }
+        OutStream &operator <<(DString &str);
     };
 
 }   // namespace logging

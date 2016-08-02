@@ -1,17 +1,17 @@
 #ifndef __HG__FORGE__STRUCTURES__DYNAMICSTRING_HPP__
 #define __HG__FORGE__STRUCTURES__DYNAMICSTRING_HPP__
 
-#include "String.hpp"
+#include "BaseString.hpp"
 
 
 namespace forge {
 namespace structures {
 
-    struct DynamicString : public String {
+    struct DString : public BaseString {
 
-        DynamicString();
-        DynamicString(const char *literal);
-        virtual ~DynamicString();
+        DString();
+        DString(const char *literal);
+        virtual ~DString();
 
         virtual void writef(const char *format, ...) override;
 

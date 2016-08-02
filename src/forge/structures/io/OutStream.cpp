@@ -12,7 +12,7 @@ namespace io {
     OutStream::~OutStream() { }
 
 
-    OutStream &OutStream::operator <<(String *str) {
+    OutStream &OutStream::operator <<(BaseString *str) {
         this->_OutStream << str->buffer();
         return *this;
     }

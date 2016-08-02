@@ -109,15 +109,15 @@
 1469730636 /home/nti/Documents/Forge/src/forge/structures/Array.hpp
 	<cstdarg>
 
-1470147062 source:/home/nti/Documents/Projects/Forge/src/forge/logging.cpp
+1470166725 source:/home/nti/Documents/Projects/Forge/src/forge/logging.cpp
 	"logging.hpp"
 	"memory.hpp"
 	"logging/LogContext.hpp"
 
-1470146125 /home/nti/Documents/Projects/Forge/src/forge/logging.hpp
+1470166719 /home/nti/Documents/Projects/Forge/src/forge/logging.hpp
 	"logging/LogContext.hpp"
 	"structures/io/OutStream.hpp"
-	"structures/DynamicString.hpp"
+	"structures/DString.hpp"
 
 1470082217 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogManager.cpp
 	"LogManager.hpp"
@@ -180,14 +180,14 @@
 	<istream>
 	"../DynamicString.hpp"
 
-1469724783 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.cpp
+1470166785 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.cpp
 	"OutStream.hpp"
 
-1470144291 /home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.hpp
+1470166656 /home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.hpp
 	<ostream>
-	"../String.hpp"
-	"../StaticString.hpp"
-	"../DynamicString.hpp"
+	"../BaseString.hpp"
+	"../SString.hpp"
+	"../DString.hpp"
 
 1470142496 /home/nti/Documents/Projects/Forge/src/forge/structures/StaticString.hpp
 	"String.hpp"
@@ -197,11 +197,12 @@
 
 1469722971 source:/home/nti/Documents/Projects/Forge/src/forge/structures/StaticString.cpp
 
-1470161664 source:/home/nti/Documents/Projects/Forge/src/test.cpp
+1470168045 source:/home/nti/Documents/Projects/Forge/src/test.cpp
 	<iostream>
 	"forge/logging.hpp"
 	"forge/structures/DArray.hpp"
-	"forge/structures/StaticString.hpp"
+	"forge/structures/SString.hpp"
+	"forge/structures/SArray.hpp"
 
 1470059038 /home/nti/Documents/Projects/Forge/src/forge/structures/Array
 
@@ -209,16 +210,16 @@
 
 1470140832 /home/nti/Documents/Projects/Forge/src/forge/structures/array/resize_strategy.hpp
 
-1470148183 source:/home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.cpp
+1470166589 source:/home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.cpp
 	"BaseException.hpp"
 	<iostream>
 	<stdexcept>
-	"../structures/StaticString.hpp"
+	"../structures/SString.hpp"
 	"../logging.hpp"
 
-1470148141 /home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.hpp
+1470166650 /home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.hpp
 	<stdexcept>
-	"../structures/StaticString.hpp"
+	"../structures/SString.hpp"
 
 1470143100 /home/nti/Documents/Projects/Forge/src/forge/logging/LogManager.hpp
 	"../structures/DynamicString.hpp"
@@ -235,12 +236,12 @@
 	"String.hpp"
 	<cstdio>
 
-1470145779 /home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.hpp
-	"../structures/String.hpp"
-	"../structures/DynamicString.hpp"
+1470166713 /home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.hpp
+	"../structures/BaseString.hpp"
+	"../structures/DString.hpp"
 	"../structures/io/OutStream.hpp"
 
-1470147345 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.cpp
+1470166779 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.cpp
 	"LogContext.hpp"
 	"../memory.hpp"
 
@@ -262,4 +263,33 @@
 	"../memory.hpp"
 	"array/resize_strategy.hpp"
 	"exceptions/array.hpp"
+
+1469623996 source:/home/nti/Documents/Projects/Forge/src/forge/structures/SArray.cpp
+
+1470166516 source:/home/nti/Documents/Projects/Forge/src/forge/structures/BaseString.cpp
+	"BaseString.hpp"
+	<cstdio>
+
+1470166510 /home/nti/Documents/Projects/Forge/src/forge/structures/BaseString.hpp
+	"BaseString.hpp"
+	<cstdarg>
+
+1470166552 source:/home/nti/Documents/Projects/Forge/src/forge/structures/DString.cpp
+	"DString.hpp"
+	<cstdio>
+	<cstring>
+	"../memory.hpp"
+
+1470166573 /home/nti/Documents/Projects/Forge/src/forge/structures/DString.hpp
+	"BaseString.hpp"
+
+1469722971 source:/home/nti/Documents/Projects/Forge/src/forge/structures/SString.cpp
+
+1470168255 /home/nti/Documents/Projects/Forge/src/forge/structures/SString.hpp
+	"BaseString.hpp"
+	<cstring>
+	"SArray.hpp"
+
+1470168208 /home/nti/Documents/Projects/Forge/src/forge/structures/SArray.hpp
+	<cstdarg>
 
