@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Forge" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="debug">
+				<Option output="bin/debug/Forge" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__FORGE__DBG__" />
+				</Compiler>
+			</Target>
+			<Target title="release">
+				<Option output="bin/release/Forge" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++0x" />
+			<Add option="-fexceptions" />
+			<Add option="-Wno-write-strings" />
+			<Add directory="src" />
+		</Compiler>
+		<Unit filename="src/forge/exceptions/BaseException.cpp" />
+		<Unit filename="src/forge/exceptions/BaseException.hpp" />
+		<Unit filename="src/forge/logging.cpp" />
+		<Unit filename="src/forge/logging.hpp" />
+		<Unit filename="src/forge/logging/LogContext.cpp" />
+		<Unit filename="src/forge/logging/LogContext.hpp" />
+		<Unit filename="src/forge/memory.cpp" />
+		<Unit filename="src/forge/memory.hpp" />
+		<Unit filename="src/forge/memory/debug_alloc.cpp" />
+		<Unit filename="src/forge/memory/debug_alloc.hpp" />
+		<Unit filename="src/forge/memory/release_alloc.cpp" />
+		<Unit filename="src/forge/memory/release_alloc.hpp" />
+		<Unit filename="src/forge/structures/DArray.hpp" />
+		<Unit filename="src/forge/structures/DynamicString.cpp" />
+		<Unit filename="src/forge/structures/DynamicString.hpp" />
+		<Unit filename="src/forge/structures/StaticArray.cpp" />
+		<Unit filename="src/forge/structures/StaticArray.hpp" />
+		<Unit filename="src/forge/structures/StaticString.cpp" />
+		<Unit filename="src/forge/structures/StaticString.hpp" />
+		<Unit filename="src/forge/structures/String.cpp" />
+		<Unit filename="src/forge/structures/String.hpp" />
+		<Unit filename="src/forge/structures/array/resize_strategy.hpp" />
+		<Unit filename="src/forge/structures/exceptions/array.cpp" />
+		<Unit filename="src/forge/structures/exceptions/array.hpp" />
+		<Unit filename="src/forge/structures/io/ConsoleInStream.cpp" />
+		<Unit filename="src/forge/structures/io/ConsoleInStream.hpp" />
+		<Unit filename="src/forge/structures/io/ConsoleOutStream.cpp" />
+		<Unit filename="src/forge/structures/io/ConsoleOutStream.hpp" />
+		<Unit filename="src/forge/structures/io/FileInStream.cpp" />
+		<Unit filename="src/forge/structures/io/FileInStream.hpp" />
+		<Unit filename="src/forge/structures/io/FileOutStream.cpp" />
+		<Unit filename="src/forge/structures/io/FileOutStream.hpp" />
+		<Unit filename="src/forge/structures/io/InStream.cpp" />
+		<Unit filename="src/forge/structures/io/InStream.hpp" />
+		<Unit filename="src/forge/structures/io/OutStream.cpp" />
+		<Unit filename="src/forge/structures/io/OutStream.hpp" />
+		<Unit filename="src/forge/vfs.hpp" />
+		<Unit filename="src/test.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,265 @@
+# depslib dependency file v1.0
+1469721726 source:/home/nti/Documents/Forge/src/forge/memory/DebugAlloc.cpp
+	"DebugAlloc.hpp"
+	<cstdio>
+
+1469722052 source:/home/nti/Documents/Forge/src/forge/memory/ReleaseAlloc.cpp
+	"ReleaseAlloc.hpp"
+	<cstdlib>
+
+1469729272 source:/home/nti/Documents/Forge/src/forge/structures/Array.cpp
+	"Array.hpp"
+
+1469724683 source:/home/nti/Documents/Forge/src/forge/structures/io/InStream.cpp
+	"InStream.hpp"
+
+1469724783 source:/home/nti/Documents/Forge/src/forge/structures/io/OutStream.cpp
+	"OutStream.hpp"
+
+1469730040 /home/nti/Documents/Forge/src/forge/structures/io/OutStream.hpp
+	<ostream>
+	"../String.hpp"
+	"../StaticString.hpp"
+	"../DynamicString.hpp"
+
+1469623996 source:/home/nti/Documents/Forge/src/forge/structures/SArray.cpp
+
+1469730083 source:/home/nti/Documents/Forge/src/test.cpp
+	<iostream>
+	"forge/logging.hpp"
+	"forge/memory.hpp"
+	"forge/structures/String.hpp"
+	"forge/structures/StaticString.hpp"
+	"forge/structures/io/OutStream.hpp"
+	"forge/structures/Array.hpp"
+
+1469719427 /home/nti/Documents/Forge/src/forge/logging.hpp
+
+1469723797 /home/nti/Documents/Forge/src/forge/memory.hpp
+	"memory/DebugAlloc.hpp"
+	"memory/release_alloc.hpp"
+
+1469722918 /home/nti/Documents/Forge/src/forge/memory/DebugAlloc.hpp
+	<cstdlib>
+
+1469722763 /home/nti/Documents/Forge/src/forge/memory/ReleaseAlloc.hpp
+	<cstdlib>
+
+1469729079 /home/nti/Documents/Forge/src/forge/structures/String.hpp
+	"String.hpp"
+
+1469723656 source:/home/nti/Documents/Forge/src/forge/structures/String.cpp
+	"String.hpp"
+	<cstring>
+	"../memory.hpp"
+
+1469724704 /home/nti/Documents/Forge/src/forge/structures/io/InStream.hpp
+	<istream>
+	"../DynamicString.hpp"
+
+1469631010 source:/home/nti/Documents/Forge/src/forge/logging/LogManager.cpp
+
+1469719633 source:/home/nti/Documents/Forge/src/forge/logging.cpp
+	"logging.hpp"
+
+1469719590 source:/home/nti/Documents/Forge/src/forge/structures/io/ConsoleInStream.cpp
+
+1469719560 source:/home/nti/Documents/Forge/src/forge/structures/io/ConsoleOutStream.cpp
+
+1469719608 source:/home/nti/Documents/Forge/src/forge/structures/io/FileInStream.cpp
+
+1469719598 source:/home/nti/Documents/Forge/src/forge/structures/io/FileOutStream.cpp
+
+1469721592 /home/nti/Documents/Forge/src/forge/memory/DebugAlloc_Definition.hpp
+
+1469623996 source:/home/nti/Documents/Forge/src/forge/structures/StaticArray.cpp
+
+1469722971 source:/home/nti/Documents/Forge/src/forge/structures/StaticString.cpp
+
+1469723517 source:/home/nti/Documents/Forge/src/forge/memory/debug_alloc.cpp
+	"debug_alloc.hpp"
+	<cstdio>
+
+1469722918 /home/nti/Documents/Forge/src/forge/memory/debug_alloc.hpp
+	<cstdlib>
+
+1469723574 source:/home/nti/Documents/Forge/src/forge/memory/release_alloc.cpp
+	"release_alloc.hpp"
+	<cstdlib>
+
+1469723391 /home/nti/Documents/Forge/src/forge/memory/release_alloc.hpp
+	<cstdlib>
+
+1469723756 source:/home/nti/Documents/Forge/src/forge/memory.cpp
+	"memory.hpp"
+
+1469724205 /home/nti/Documents/Forge/src/forge/structures/BaseString.hpp
+
+1469724415 source:/home/nti/Documents/Forge/src/forge/structures/DynamicString.cpp
+	"DynamicString.hpp"
+	<cstring>
+	"../memory.hpp"
+
+1469724661 /home/nti/Documents/Forge/src/forge/structures/DynamicString.hpp
+	"String.hpp"
+
+1469729096 /home/nti/Documents/Forge/src/forge/structures/StaticString.hpp
+	"String.hpp"
+
+1469730636 /home/nti/Documents/Forge/src/forge/structures/Array.hpp
+	<cstdarg>
+
+1470147062 source:/home/nti/Documents/Projects/Forge/src/forge/logging.cpp
+	"logging.hpp"
+	"memory.hpp"
+	"logging/LogContext.hpp"
+
+1470146125 /home/nti/Documents/Projects/Forge/src/forge/logging.hpp
+	"logging/LogContext.hpp"
+	"structures/io/OutStream.hpp"
+	"structures/DynamicString.hpp"
+
+1470082217 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogManager.cpp
+	"LogManager.hpp"
+
+1470156473 source:/home/nti/Documents/Projects/Forge/src/forge/memory.cpp
+	"memory.hpp"
+
+1470156465 /home/nti/Documents/Projects/Forge/src/forge/memory.hpp
+	"memory/debug_alloc.hpp"
+	"memory/release_alloc.hpp"
+
+1470158661 /home/nti/Documents/Projects/Forge/src/forge/memory/release_alloc.hpp
+	<cstdlib>
+
+1469979542 source:/home/nti/Documents/Projects/Forge/src/forge/memory/debug_alloc.cpp
+	"debug_alloc.hpp"
+	<cstdio>
+
+1470158679 /home/nti/Documents/Projects/Forge/src/forge/memory/debug_alloc.hpp
+	<cstdlib>
+
+1469979612 source:/home/nti/Documents/Projects/Forge/src/forge/memory/release_alloc.cpp
+	"release_alloc.hpp"
+	<cstdlib>
+
+1469729272 source:/home/nti/Documents/Projects/Forge/src/forge/structures/Array.cpp
+	"Array.hpp"
+
+1470159078 /home/nti/Documents/Projects/Forge/src/forge/structures/Array.hpp
+	<cstdarg>
+	"../memory.hpp"
+	"array/resize_strategy.hpp"
+	"exceptions/array.hpp"
+
+1470158631 source:/home/nti/Documents/Projects/Forge/src/forge/structures/DynamicString.cpp
+	"DynamicString.hpp"
+	<cstdio>
+	<cstring>
+	"../memory.hpp"
+
+1470145957 /home/nti/Documents/Projects/Forge/src/forge/structures/DynamicString.hpp
+	"String.hpp"
+
+1470142453 /home/nti/Documents/Projects/Forge/src/forge/structures/String.hpp
+	"String.hpp"
+	<cstdarg>
+
+1469719590 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/ConsoleInStream.cpp
+
+1469719560 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/ConsoleOutStream.cpp
+
+1469719608 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/FileInStream.cpp
+
+1469719598 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/FileOutStream.cpp
+
+1469724683 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/InStream.cpp
+	"InStream.hpp"
+
+1469724704 /home/nti/Documents/Projects/Forge/src/forge/structures/io/InStream.hpp
+	<istream>
+	"../DynamicString.hpp"
+
+1469724783 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.cpp
+	"OutStream.hpp"
+
+1470144291 /home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.hpp
+	<ostream>
+	"../String.hpp"
+	"../StaticString.hpp"
+	"../DynamicString.hpp"
+
+1470142496 /home/nti/Documents/Projects/Forge/src/forge/structures/StaticString.hpp
+	"String.hpp"
+	<cstring>
+
+1469623996 source:/home/nti/Documents/Projects/Forge/src/forge/structures/StaticArray.cpp
+
+1469722971 source:/home/nti/Documents/Projects/Forge/src/forge/structures/StaticString.cpp
+
+1470161664 source:/home/nti/Documents/Projects/Forge/src/test.cpp
+	<iostream>
+	"forge/logging.hpp"
+	"forge/structures/DArray.hpp"
+	"forge/structures/StaticString.hpp"
+
+1470059038 /home/nti/Documents/Projects/Forge/src/forge/structures/Array
+
+1470059348 /home/nti/Documents/Projects/Forge/src/forge/structures/Array/resize_strategy.hpp
+
+1470140832 /home/nti/Documents/Projects/Forge/src/forge/structures/array/resize_strategy.hpp
+
+1470148183 source:/home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.cpp
+	"BaseException.hpp"
+	<iostream>
+	<stdexcept>
+	"../structures/StaticString.hpp"
+	"../logging.hpp"
+
+1470148141 /home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.hpp
+	<stdexcept>
+	"../structures/StaticString.hpp"
+
+1470143100 /home/nti/Documents/Projects/Forge/src/forge/logging/LogManager.hpp
+	"../structures/DynamicString.hpp"
+	"../structures/io/OutStream.hpp"
+
+1470142260 source:/home/nti/Documents/Projects/Forge/src/forge/structures/array/IndexError.cpp
+	"IndexError.hpp"
+	<cstdio>
+
+1470141555 /home/nti/Documents/Projects/Forge/src/forge/structures/array/IndexError.hpp
+	"../../exceptions/BaseException.hpp"
+
+1470142271 source:/home/nti/Documents/Projects/Forge/src/forge/structures/String.cpp
+	"String.hpp"
+	<cstdio>
+
+1470145779 /home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.hpp
+	"../structures/String.hpp"
+	"../structures/DynamicString.hpp"
+	"../structures/io/OutStream.hpp"
+
+1470147345 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.cpp
+	"LogContext.hpp"
+	"../memory.hpp"
+
+1470159825 source:/home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/array.cpp
+	"array.hpp"
+
+1470159149 /home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/array.hpp
+	"../../exceptions/BaseException.hpp"
+
+1470154807 source:/home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/IndexError.cpp
+	"IndexError.hpp"
+	<cstdio>
+
+1470154690 /home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/IndexError.hpp
+	"../../exceptions/BaseException.hpp"
+
+1470165407 /home/nti/Documents/Projects/Forge/src/forge/structures/DArray.hpp
+	<cstdarg>
+	"../memory.hpp"
+	"array/resize_strategy.hpp"
+	"exceptions/array.hpp"
+
