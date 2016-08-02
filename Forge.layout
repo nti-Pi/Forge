@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
+<<<<<<< HEAD
 	<ActiveTarget name="debug" />
 	<File name="src/forge/memory.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
@@ -145,6 +146,17 @@
 	<File name="src/forge/structures/io/InStream.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="440" topLine="0" />
+=======
+	<ActiveTarget name="release" />
+	<File name="src/forge/logging/Log.hpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2127" topLine="77" />
+		</Cursor>
+	</File>
+	<File name="src/forge/memory/Allocator.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2050" topLine="5" />
+>>>>>>> b7ca74ddb9b03ffb89b4299c89efd1c78bb07c1f
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -1,0 +1,6 @@
+Features to add in the future:
+1) 	HTTP utils
+2) 	Memory-efficient, predictable data-structures
+3)	Generalized HashMaps (use string hashes to convert structs into keys)
+4)	Fast, generalized parsers (eg: XML)
+
