@@ -1,8 +1,8 @@
 #ifndef __HG__FORGE__LOGGING__LOGMANAGER_HPP__
 #define __HG__FORGE__LOGGING__LOGMANAGER_HPP__
 
-#include "../structures/BaseString.hpp"
-#include "../structures/DString.hpp"
+#include "../structures/string/BString.hpp"
+#include "../structures/string/DString.hpp"
 #include "../structures/io/OutStream.hpp"
 
 
@@ -11,6 +11,8 @@ namespace logging {
 
     using namespace structures;
     using namespace structures::io;
+
+    using namespace structures::string;
 
 
     struct LogContext {
@@ -30,7 +32,7 @@ namespace logging {
 
       public:
         // Operators:
-        OutStream &operator <<(BaseString *str);
+        OutStream &operator <<(BString *str);
         OutStream &operator <<(int integer);
         OutStream &operator <<(unsigned int unsignedInteger);
         OutStream &operator <<(long int longInteger);

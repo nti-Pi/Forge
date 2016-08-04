@@ -1,17 +1,24 @@
-#ifndef __HG__FORGE__STRUCTURES__ARRAY_HPP__
-#define __HG__FORGE__STRUCTURES__ARRAY_HPP__
+#ifndef __HG__FORGE__STRUCTURES__ARRAY__DARRAY_HPP__
+#define __HG__FORGE__STRUCTURES__ARRAY__DARRAY_HPP__
 
 #include <cstdarg>
-#include "../memory.hpp"
+#include "../../memory.hpp"
+#include "../exceptions.hpp"
 
-#include "array/resize_strategy.hpp"
-#include "exceptions/array.hpp"
+#include "resize_strategy.hpp"
+#include "exceptions.hpp"
+
+#include "BArray.hpp"
+#include "ArrayIterator.hpp"
 
 
 namespace forge {
 namespace structures {
+namespace array {
 
-    using namespace array::resize_strategy;
+    using namespace forge::structures::exceptions;
+    using namespace forge::structures::array::resize_strategy;
+    using namespace forge::structures::array::exceptions;
 
     /**
      *  DArray (short for Dynamic Array) is a resizable container that stores all variables in a contiguous block of memory.
@@ -36,7 +43,7 @@ namespace structures {
     template <typename T,
               typename TLen = unsigned int,
               ResizeStrategyFP<TLen> ResizeStrategy = fitStrat<TLen> >
-    struct DArray {  // virtual
+    struct DArray : public BArray<T, TLen> {
         DArray();
         DArray(DArray<T, TLen, ResizeStrategy> &other);
         DArray(TLen len, T buffer[]);
@@ -74,11 +81,7 @@ namespace structures {
         T    *push_back();
         void  pop_back();
 
-        T &front();     // Returns reference to *this[0]
-        T &back();      // Returns reference to *this[this->length - 1]
-
-        T *begin();     // Returns this->Buffer + 0
-        T *end();       // Returns this->Buffer + this->length
+        inline bool empty() { return _Length == 0; }    // Returns whether or not this array is empty
 
       protected:
         T    *_Buffer;
@@ -88,8 +91,8 @@ namespace structures {
 
       public:
 
-        inline T const *buffer() { return _Buffer; }
-        inline TLen     length() { return _Length; }
+        inline virtual T    *buffer() override   { return _Buffer; }
+        inline virtual TLen  length() override   { return _Length; }
 
       public:
 
@@ -161,7 +164,7 @@ namespace structures {
         if (newBufferLen != _BufferLen) {
             #ifdef __FORGE__DBG__
                 if (newBufferLen < _Length)
-                    throw exceptions::array::ShrinkOverflowError(_Length, newBufferLen);
+                    throw ShrinkOverflowError(_Length, newBufferLen);
             #endif // __FORGE__DBG__
 
             _BufferLen = newBufferLen;
@@ -183,7 +186,7 @@ namespace structures {
     T &DArray<T, TLen, ResizeStrategy>::operator [](TLen index) {
         #ifdef __FORGE__DBG__
             if (index >= _Length) {
-                throw exceptions::array::IndexError(index, _Length);
+                throw IndexError(index, _Length);
             }
         #endif // __FORGE__DBG__
 
@@ -204,11 +207,11 @@ namespace structures {
 
         #ifdef __FORGE__DBG__
             if (_Length > _BufferLen) {
-                throw exceptions::array::OverflowError();
+                throw OverflowError();
             }
         #endif // __FORGE__DBG__
 
-        return &back();
+        return &BArray<T, TLen>::back();
     }
 
 
@@ -228,6 +231,13 @@ namespace structures {
         // pop_back does not re-allocate the memory block, behaving exactly like std::vector's
         // pop_back method.
         // Ideally, one should make multiple pops and then
+        #ifdef __FORGE__DBG__
+            if (_Length == 0) {
+                // Raise an Underflow Error!
+                throw UnderflowError();
+            }
+        #endif // __FORGE__DBG__
+
         --_Length;
     }
 
@@ -241,37 +251,8 @@ namespace structures {
         reserve(_Length);
     }
 
-
-    template <typename T, typename TLen,
-              ResizeStrategyFP<TLen> ResizeStrategy>
-    T &DArray<T, TLen, ResizeStrategy>::front() {
-        return _Buffer[0];
-    }
-
-
-
-    template <typename T, typename TLen,
-              ResizeStrategyFP<TLen> ResizeStrategy>
-    T &DArray<T, TLen, ResizeStrategy>::back() {
-        return _Buffer[_Length - 1];
-    }
-
-
-    template <typename T, typename TLen,
-              ResizeStrategyFP<TLen> ResizeStrategy>
-    T *DArray<T, TLen, ResizeStrategy>::begin() {
-        return _Buffer;
-    }
-
-
-    template <typename T, typename TLen,
-              ResizeStrategyFP<TLen> ResizeStrategy>
-    T *DArray<T, TLen, ResizeStrategy>::end() {
-        return _Buffer + _Length;
-    }
-
-
+}   // namespace array
 }   // namespace structures
 }   // namespace forge
 
-#endif // __HG__FORGE__STRUCTURES__ARRAY_HPP__
+#endif // __HG__FORGE__STRUCTURES__ARRAY__DARRAY_HPP__

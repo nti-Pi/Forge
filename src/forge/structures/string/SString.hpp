@@ -1,24 +1,25 @@
 #ifndef __HG__FORGE__STRUCTURES__STATICSTRING_HPP__
 #define __HG__FORGE__STRUCTURES__STATICSTRING_HPP__
 
-#include "BaseString.hpp"
 #include <cstring>
 
-#define str(X) SString<sizeof(X)>(X)
+#include "BString.hpp"
+#include "../array/SArray.hpp"
 
-#include "SArray.hpp"
+using namespace forge::structures::array;
 
 
 namespace forge {
 namespace structures {
+namespace string {
 
     template <TStringLen Length>
-    struct SString : public BaseString {
+    struct SString : public BString {
         SString();
-        SString(SArray<char, Length> charArray);
+        SString(SArray<char, TStringLen, Length> charArray);
 
       protected:
-        SArray<char, Length> _Buffer;
+        SArray<char, TStringLen, Length> _Buffer;
 
       public:
         virtual inline const char *buffer() override { return _Buffer.buffer(); }
@@ -26,18 +27,21 @@ namespace structures {
 
 
     template <TStringLen Length>
-    SString<Length>::SString() {
-        _Buffer[0] = '\0';
-    }
+    SString<Length>::SString()
+        : _Buffer("\0") { }
 
 
     template <TStringLen Length>
-    SString<Length>::SString(SArray<char, Length> charArray) {
+    SString<Length>::SString(SArray<char, TStringLen, Length> charArray) {
         strcpy(_Buffer, charArray.buffer());
     }
 
+}   // namespace string
 }   // namespace structures
 }   // namespace forge
+
+
+#define str(X) SString<sizeof(X)>(X)
 
 
 #endif // __HG__FORGE__STRUCTURES__STATICSTRING_HPP__

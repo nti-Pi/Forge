@@ -4,7 +4,7 @@
 #include "logging/LogContext.hpp"
 #include "structures/io/OutStream.hpp"
 
-#include "structures/DString.hpp"
+#include "structures/string/DString.hpp"
 
 
 namespace forge {

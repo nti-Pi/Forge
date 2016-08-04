@@ -30,7 +30,7 @@ namespace logging {
     }
 
     // Operators:
-    OutStream &LogContext::operator <<(BaseString *str) {
+    OutStream &LogContext::operator <<(BString *str) {
         return (prefix() == nullptr ? (_PassThroughStream << str) : (_PassThroughStream << prefix() << str));
     }
 

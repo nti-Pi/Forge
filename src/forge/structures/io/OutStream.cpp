@@ -1,5 +1,7 @@
 #include "OutStream.hpp"
 
+using namespace forge::structures::string;
+
 
 namespace forge {
 namespace structures {
@@ -12,7 +14,7 @@ namespace io {
     OutStream::~OutStream() { }
 
 
-    OutStream &OutStream::operator <<(BaseString *str) {
+    OutStream &OutStream::operator <<(BString *str) {
         this->_OutStream << str->buffer();
         return *this;
     }

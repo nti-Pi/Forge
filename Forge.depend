@@ -114,10 +114,10 @@
 	"memory.hpp"
 	"logging/LogContext.hpp"
 
-1470166719 /home/nti/Documents/Projects/Forge/src/forge/logging.hpp
+1470244950 /home/nti/Documents/Projects/Forge/src/forge/logging.hpp
 	"logging/LogContext.hpp"
 	"structures/io/OutStream.hpp"
-	"structures/DString.hpp"
+	"structures/string/DString.hpp"
 
 1470082217 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogManager.cpp
 	"LogManager.hpp"
@@ -180,14 +180,14 @@
 	<istream>
 	"../DynamicString.hpp"
 
-1470166785 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.cpp
+1470249797 source:/home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.cpp
 	"OutStream.hpp"
 
-1470166656 /home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.hpp
+1470249731 /home/nti/Documents/Projects/Forge/src/forge/structures/io/OutStream.hpp
 	<ostream>
-	"../BaseString.hpp"
-	"../SString.hpp"
-	"../DString.hpp"
+	"../string/BString.hpp"
+	"../string/SString.hpp"
+	"../string/DString.hpp"
 
 1470142496 /home/nti/Documents/Projects/Forge/src/forge/structures/StaticString.hpp
 	"String.hpp"
@@ -197,29 +197,28 @@
 
 1469722971 source:/home/nti/Documents/Projects/Forge/src/forge/structures/StaticString.cpp
 
-1470168045 source:/home/nti/Documents/Projects/Forge/src/test.cpp
+1470303380 source:/home/nti/Documents/Projects/Forge/src/test.cpp
 	<iostream>
 	"forge/logging.hpp"
-	"forge/structures/DArray.hpp"
-	"forge/structures/SString.hpp"
-	"forge/structures/SArray.hpp"
+	"forge/structures/list/DLList.hpp"
+	"forge/structures/list/DLIterator.hpp"
 
 1470059038 /home/nti/Documents/Projects/Forge/src/forge/structures/Array
 
 1470059348 /home/nti/Documents/Projects/Forge/src/forge/structures/Array/resize_strategy.hpp
 
-1470140832 /home/nti/Documents/Projects/Forge/src/forge/structures/array/resize_strategy.hpp
+1470277644 /home/nti/Documents/Projects/Forge/src/forge/structures/array/resize_strategy.hpp
 
-1470166589 source:/home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.cpp
+1470244811 source:/home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.cpp
 	"BaseException.hpp"
 	<iostream>
 	<stdexcept>
-	"../structures/SString.hpp"
+	"../structures/string/SString.hpp"
 	"../logging.hpp"
 
-1470166650 /home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.hpp
+1470249714 /home/nti/Documents/Projects/Forge/src/forge/exceptions/BaseException.hpp
 	<stdexcept>
-	"../structures/SString.hpp"
+	"../structures/string/SString.hpp"
 
 1470143100 /home/nti/Documents/Projects/Forge/src/forge/logging/LogManager.hpp
 	"../structures/DynamicString.hpp"
@@ -236,19 +235,19 @@
 	"String.hpp"
 	<cstdio>
 
-1470166713 /home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.hpp
-	"../structures/BaseString.hpp"
-	"../structures/DString.hpp"
+1470249783 /home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.hpp
+	"../structures/string/BString.hpp"
+	"../structures/string/DString.hpp"
 	"../structures/io/OutStream.hpp"
 
-1470166779 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.cpp
+1470244989 source:/home/nti/Documents/Projects/Forge/src/forge/logging/LogContext.cpp
 	"LogContext.hpp"
 	"../memory.hpp"
 
-1470159825 source:/home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/array.cpp
+1470231718 source:/home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/array.cpp
 	"array.hpp"
 
-1470159149 /home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/array.hpp
+1470231642 /home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/array.hpp
 	"../../exceptions/BaseException.hpp"
 
 1470154807 source:/home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/IndexError.cpp
@@ -258,11 +257,14 @@
 1470154690 /home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/IndexError.hpp
 	"../../exceptions/BaseException.hpp"
 
-1470165407 /home/nti/Documents/Projects/Forge/src/forge/structures/DArray.hpp
+1470241775 /home/nti/Documents/Projects/Forge/src/forge/structures/DArray.hpp
 	<cstdarg>
 	"../memory.hpp"
 	"array/resize_strategy.hpp"
+	"exceptions/common.hpp"
 	"exceptions/array.hpp"
+	"BArray.hpp"
+	"ArrayIterator.hpp"
 
 1469623996 source:/home/nti/Documents/Projects/Forge/src/forge/structures/SArray.cpp
 
@@ -285,11 +287,114 @@
 
 1469722971 source:/home/nti/Documents/Projects/Forge/src/forge/structures/SString.cpp
 
-1470168255 /home/nti/Documents/Projects/Forge/src/forge/structures/SString.hpp
+1470242064 /home/nti/Documents/Projects/Forge/src/forge/structures/SString.hpp
 	"BaseString.hpp"
 	<cstring>
 	"SArray.hpp"
 
-1470168208 /home/nti/Documents/Projects/Forge/src/forge/structures/SArray.hpp
+1470242074 /home/nti/Documents/Projects/Forge/src/forge/structures/SArray.hpp
 	<cstdarg>
+	"BArray.hpp"
+
+1470169866 source:/home/nti/Documents/Projects/Forge/src/forge/structures/DLList.cpp
+
+1470169830 source:/home/nti/Documents/Projects/Forge/src/forge/structures/SLList.cpp
+
+1470230451 /home/nti/Documents/Projects/Forge/src/forge/structures/BaseArray.hpp
+
+1470243859 /home/nti/Documents/Projects/Forge/src/forge/structures/BArray.hpp
+	"ArrayIterator.hpp"
+
+1470235893 source:/home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/common.cpp
+	"common.hpp"
+
+1470235880 /home/nti/Documents/Projects/Forge/src/forge/structures/exceptions/common.hpp
+	"../../exceptions/BaseException.hpp"
+
+1470237028 /home/nti/Documents/Projects/Forge/src/forge/structures/DLList.hpp
+	"../memory.hpp"
+	"exceptions/common.hpp"
+
+1470235794 source:/home/nti/Documents/Projects/Forge/src/forge/structures/DArray.cpp
+	"DArray.hpp"
+
+1470244002 /home/nti/Documents/Projects/Forge/src/forge/structures/ArrayIterator.hpp
+
+1470249943 /home/nti/Documents/Projects/Forge/src/forge/structures/string/SString.hpp
+	<cstring>
+	"BString.hpp"
+	"../array/SArray.hpp"
+
+1470166510 /home/nti/Documents/Projects/Forge/src/forge/structures/string/BaseString.hpp
+	"BaseString.hpp"
+	<cstdarg>
+
+1470276754 /home/nti/Documents/Projects/Forge/src/forge/structures/array/SArray.hpp
+	<cstdarg>
+	"BArray.hpp"
+
+1470276658 /home/nti/Documents/Projects/Forge/src/forge/structures/array/BArray.hpp
+	"ArrayIterator.hpp"
+
+1470276647 /home/nti/Documents/Projects/Forge/src/forge/structures/array/ArrayIterator.hpp
+
+1470249768 /home/nti/Documents/Projects/Forge/src/forge/structures/string/DString.hpp
+	"BString.hpp"
+
+1470249756 /home/nti/Documents/Projects/Forge/src/forge/structures/string/BString.hpp
+	"BString.hpp"
+	<cstdarg>
+
+1470249889 source:/home/nti/Documents/Projects/Forge/src/forge/structures/array/exceptions.cpp
+	"exceptions.hpp"
+
+1470276720 /home/nti/Documents/Projects/Forge/src/forge/structures/array/exceptions.hpp
+	"../../exceptions/BaseException.hpp"
+
+1470245186 source:/home/nti/Documents/Projects/Forge/src/forge/structures/exceptions.cpp
+	"exceptions.hpp"
+
+1470245164 /home/nti/Documents/Projects/Forge/src/forge/structures/exceptions.hpp
+	"../exceptions/BaseException.hpp"
+
+1470169866 source:/home/nti/Documents/Projects/Forge/src/forge/structures/list/DLList.cpp
+
+1470169830 source:/home/nti/Documents/Projects/Forge/src/forge/structures/list/SLList.cpp
+
+1470249824 source:/home/nti/Documents/Projects/Forge/src/forge/structures/string/BString.cpp
+	"BString.hpp"
+	<cstdio>
+
+1470249836 source:/home/nti/Documents/Projects/Forge/src/forge/structures/string/DString.cpp
+	"DString.hpp"
+	<cstdio>
+	<cstring>
+	"../../memory.hpp"
+
+1469722971 source:/home/nti/Documents/Projects/Forge/src/forge/structures/string/SString.cpp
+
+1470303341 /home/nti/Documents/Projects/Forge/src/forge/structures/list/DLList.hpp
+	"../../memory.hpp"
+	"../exceptions.hpp"
+	"DLNode.hpp"
+	"DLIterator.hpp"
+
+1470277598 /home/nti/Documents/Projects/Forge/src/forge/structures/array/DArray.hpp
+	<cstdarg>
+	"../../memory.hpp"
+	"../exceptions.hpp"
+	"resize_strategy.hpp"
+	"exceptions.hpp"
+	"BArray.hpp"
+	"ArrayIterator.hpp"
+
+1470276481 /home/nti/Documents/Projects/Forge/src/forge/structures/list/DLLNode.hpp
+	"BLNode.hpp"
+
+1470276414 /home/nti/Documents/Projects/Forge/src/forge/structures/list/BLNode.hpp
+
+1470285432 /home/nti/Documents/Projects/Forge/src/forge/structures/list/DLNode.hpp
+
+1470302547 /home/nti/Documents/Projects/Forge/src/forge/structures/list/DLIterator.hpp
+	"DLNode.hpp"
 

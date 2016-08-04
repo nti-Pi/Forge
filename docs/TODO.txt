@@ -1,0 +1,13 @@
+->	Implement Data Structures:
+	->	Implement LinkedList
+	->	Implement HashMap
+	->	Implement Set
+
+->	Fix exceptions
+->	Fix logging, flesh out the account-system
+->	Add memory logging now that DArray is done
+->	Implement concatenation, reversal for strings, sorting for arrays
+
+->	Advanced I/O:
+	->	Finish off the virtual file-system
+	->	Socket capabilities (HTTP for starters, maybe something lower-level for IPC)

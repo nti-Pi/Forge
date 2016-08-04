@@ -2,11 +2,12 @@
 
 #include <cstdio>
 #include <cstring>
-#include "../memory.hpp"
+#include "../../memory.hpp"
 
 
 namespace forge {
 namespace structures {
+namespace string {
 
     DString::DString()
         : _Buffer(nullptr) { }
@@ -43,5 +44,6 @@ namespace structures {
         va_end(args);
     }
 
+}   // namespace string
 }   // namespace structures
 }   // namespace forge

@@ -24,5 +24,9 @@ Forge supports two build targets:
 *   **release**  
     In the release build, the Forge library is optimized for performance, and disables multiple introspection-features and checks.
 
-Take a look at demo.cpp for more information.
+##Still in development##
+TODO:
+*   Fix insert and erase for DLList (Doubly-Linked List)
+*   Implement SLList (Singly-Linked List)
+*   Implement HashMap
 

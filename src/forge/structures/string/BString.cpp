@@ -1,12 +1,13 @@
-#include "BaseString.hpp"
+#include "BString.hpp"
 
 #include <cstdio>
 
 
 namespace forge {
 namespace structures {
+namespace string {
 
-    void BaseString::writef(const char *format, ...) {
+    void BString::writef(const char *format, ...) {
         va_list args_list;
         va_start(args_list, format);
 
@@ -15,5 +16,6 @@ namespace structures {
         va_end(args_list);
     }
 
+}   // namespace string
 }   // namespace structures
 }   // namespace forge

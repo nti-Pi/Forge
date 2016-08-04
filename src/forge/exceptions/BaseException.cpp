@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "../structures/SString.hpp"
+#include "../structures/string/SString.hpp"
 #include "../logging.hpp"
 
 

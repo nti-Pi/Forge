@@ -1,13 +1,14 @@
 #ifndef __HG__FORGE__STRUCTURES__DYNAMICSTRING_HPP__
 #define __HG__FORGE__STRUCTURES__DYNAMICSTRING_HPP__
 
-#include "BaseString.hpp"
+#include "BString.hpp"
 
 
 namespace forge {
 namespace structures {
+namespace string {
 
-    struct DString : public BaseString {
+    struct DString : public BString {
 
         DString();
         DString(const char *literal);
@@ -31,6 +32,7 @@ namespace structures {
 
     };
 
+}   // namespace string
 }   // namespace structures
 }   // namespace forge
 

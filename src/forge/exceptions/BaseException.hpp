@@ -2,7 +2,7 @@
 #define __HG__FORGE__EXCEPTIONS__BASEEXCEPTION_HPP__
 
 #include <stdexcept>
-#include "../structures/SString.hpp"
+#include "../structures/string/SString.hpp"
 
 
 namespace forge {
@@ -18,7 +18,7 @@ namespace exceptions {
         virtual void throwEx() final;
 
       protected:
-        SString<64> _MessageBuffer;
+        string::SString<64> _MessageBuffer;
     };
 
 }   // namespace exceptions
