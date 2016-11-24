@@ -1,5 +1,5 @@
 # Forge #
-_A *simple* library for memory allocation, logging, and memory-efficient data-structures._
+_A flexible barebones library for memory allocation, logging, and memory-efficient data-structures._
 
 ## Purpose: ##
 If you're a lazy person, then Forge is for you.  
